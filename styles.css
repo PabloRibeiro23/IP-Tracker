@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', sans-serif;
+}
+
+*:not(#map){
+    transition: ease 0.3s;
+}
+
+body {
+    background-image: url('./images/pattern-bg-mobile.png');
+    background-size: cover;
+}
+
+#main-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 45vh;
+    width: 100vw;
+    z-index: 2;
+}
+
+.title {
+    font-size: 2rem;
+    color: #fff;
+    font-weight: 500;
+    text-align: center;
+    margin: 1rem auto;
+}
+
+.form {
+    width: 80vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 2rem auto;
+}
+
+.inputForm {
+    height: 3.5rem;
+    width: 85%;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border: 1px solid #eee;
+    padding-left: 1.5rem;
+    font-weight: 400;
+    font-size: 1.2rem;
+}
+
+.inputForm::placeholder {
+    color: hsl(0, 0%, 59%);
+}
+
+.ipSubmit {
+    height: 3.6rem;
+    width: 15%;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border: 1px solid #000;
+    background-color: #000;
+    color: #eee;
+}
+
+#mainInfo {
+    width: 80vw;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    margin: 0 auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 10px 5px rgba(0,0,0,0.3);
+    text-align: center;
+    padding: 1rem;
+}
+
+.mainInfo-name {
+    font-size: 0.8rem;
+    margin: 1rem auto 0.5rem;
+    color: hsl(0, 0%, 59%);
+}
+
+.mainInfo-data {
+    font-weight: 500;
+    color: hsl(0, 0%, 17%);
+    font-size: 1.2rem;
+}
+
+#map {
+    position: fixed;
+    z-index: 0;
+    top: 45vh;
+    height: 55vh;
+    width: 100vw;
+}
+
+hr {
+    position: relative;
+    top: 1rem;
+    border: 0.1px solid hsl(0, 0%, 90%);
+    height: 50px;
+}
+
+@media screen and (max-width:599px) {
+    hr {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 600px){
+    #main-container {
+        height: 25vh;
+    }
+    #map {
+        height: 65vh;
+        top: 35vh;
+    }
+    .form {
+        width: 40vw;
+    }
+    .inputForm {
+        height: 3rem;
+        width: 90%;
+    }
+    .ipSubmit {
+        height: 3.1rem;
+        width: 10%;
+    }
+    #mainInfo {
+        flex-direction: row;
+        text-align: left;
+        width: 75vw;
+        min-height: 100px;
+        justify-content: space-around;
+        padding: 1rem;
+    }
+    .mainInfo-data, .mainInfo-name {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+    body {
+        background-image: url('./images/pattern-bg-desktop.png');
+        background-size: cover;
+    }
+}

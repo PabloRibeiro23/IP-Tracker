@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+  <title>Frontend Mentor | IP Address Tracker</title>
+</head>
+<body>
+  
+  <div id="main-container">
+    <h1 class="title">IP Address Tracker</h1>
+    <div class="form">
+      <input type="text" placeholder="Searh for any IP addres or domain" class="inputForm">
+      <button class="ipSubmit">></button>
+    </div>
+    <div id="mainInfo">
+      <div class="info-ipAddress">
+        <p class="mainInfo-name ip">IP ADDRESS</p>
+        <p class="mainInfo-data ip"></p>
+      </div>
+      <hr>
+      <div class="info-location">
+        <p class="mainInfo-name location">LOCATION</p>
+        <div>
+          <p class="mainInfo-data city"></p>
+          <p class="mainInfo-data region"></p>
+          <p class="mainInfo-data postalCode"></p>
+        </div>
+      </div>
+      <hr>
+      <div class="info-timezone">
+        <p class="mainInfo-name timezone">TIMEZONE</p>
+        <p class="mainInfo-data timezone"></p>
+      </div>
+      <hr>
+      <div class="info-isp">
+        <p class="mainInfo-name isp">ISP</p>
+        <p class="mainInfo-data isp"></p>
+      </div>
+    </div>
+  </div>
+
+  <div id="map"></div>
+  <script src="./script.js"></script>
+</body>
+</html>
